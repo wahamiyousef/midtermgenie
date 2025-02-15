@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware=
+from fastapi.middleware.cors import CORSMiddleware
+from controllers.examgenerator import router as examgenerator_route
 
 app = FastAPI()
 '''
@@ -11,7 +12,8 @@ Redoc UI: http://127.0.0.1:8000/redoc
 
 # Add CORS middleware
 origins = [
-  "http://localhost:300", # React
+  "http://localhost:3000", # React
+  "http://localhost:5173", # Vite
   "https://yourfrontenddomain.com",  # Production frontend
 ]
 

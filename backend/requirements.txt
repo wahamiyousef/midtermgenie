@@ -1,2 +1,6 @@
 fastapi
 uvicorn[standard]
+python-dotenv
+openai
+fpdf
+python-multipart
