@@ -1,12 +1,14 @@
 import './App.css'
-import { Button } from './components/ui/button'
+import Layout from './layout'
+import MainPage from './MainPage'
 
 function App() {
 
   return (
     <div>
-      <h1>hello</h1>
-      <Button>button</Button>
+      <Layout children={
+        <MainPage />
+      } />
     </div>
   )
 }
