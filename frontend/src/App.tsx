@@ -10,6 +10,7 @@ import { supabase } from "../supabaseClient";
 import LoginPage from './components/pages/LoginPage'
 import { Auth } from './components/pages/Auth'
 import { Account } from './components/pages/Account'
+import Landing from './components/pages/Landing'
 import { LoaderCircle } from 'lucide-react'
 
 
@@ -55,7 +56,10 @@ function App() {
     <Router>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         {!session ? (
-          <Auth />
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/login" element={<Auth />} />
+          </Routes>
         ) : (
           <Layout>
             {/* <Account key={session.user.id} session={session} /> */}
